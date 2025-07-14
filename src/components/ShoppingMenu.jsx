@@ -35,7 +35,7 @@ const ShoppingMenu = () => {
     }
 
     const handleInputChange = (e, item) => {
-        const val = parseInt(e.target.value) || 0;
+        const val = parseInt(e.target.value) || "";
 
         setQuantity(prev => ({ ...prev, [item.id]: val }));
         dispatch(updateCart({ val, id: item.id }));

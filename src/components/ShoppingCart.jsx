@@ -10,7 +10,7 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
 
   const handleInputChange = (e, item) => {
-    const val = parseInt(e.target.value);
+    const val = parseInt(e.target.value) || "";
     dispatch(updateCart({ id: item.id, val: val }));
     if (val === 0) {
       dispatch(removeFromCart(item.id));
