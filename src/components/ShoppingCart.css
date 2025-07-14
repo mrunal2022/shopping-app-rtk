@@ -1,0 +1,41 @@
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.shopping-cart {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.cart-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.no-items {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-total {
+    width: 100%;
+    height: 90px;
+    background-color: #c4e4c4;
+    align-items: center;
+    padding-left: 260px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+
+.delete-icon-pic {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
