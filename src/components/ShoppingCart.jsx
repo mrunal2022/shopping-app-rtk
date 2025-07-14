@@ -7,7 +7,6 @@ import './ShoppingCart.css';
 
 const ShoppingCart = () => {
   const shoppingCartItems = useSelector(state => state.shoppingCart);
-  console.log(shoppingCartItems);
   const dispatch = useDispatch();
 
   const handleInputChange = (e, item) => {

@@ -10,7 +10,6 @@ import { useEffect } from "react";
 const ShoppingMenu = () => {
     const shoppingCartItems = useSelector(state => state.shoppingCart);
     const [updatedGroceryItems, setUpdatedGroceryItems] = useState([]);
-    console.log(shoppingCartItems);
     const [showQuantityField, setShowQuantityField] = useState({});
     const [quantity, setQuantity] = useState({});
     const dispatch = useDispatch();
