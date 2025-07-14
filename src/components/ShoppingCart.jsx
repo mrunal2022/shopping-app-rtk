@@ -10,7 +10,8 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
 
   const handleInputChange = (e, item) => {
-    const val = parseInt(e.target.value) || "";
+    let val = e.target.value;
+    val = val === "" ? val : parseInt(e.target.value);
     dispatch(updateCart({ id: item.id, val: val }));
     if (val === 0) {
       dispatch(removeFromCart(item.id));
@@ -23,7 +24,7 @@ const ShoppingCart = () => {
 
   const getSubTotal = () => {
     if (shoppingCartItems.length > 0) {
-      return shoppingCartItems.reduce((acc, curr) => acc + parseInt(curr.total), 0)
+      return shoppingCartItems.reduce((acc, curr) => acc + parseInt(curr.total), 0).toFixed(2)
     }
   }
 
